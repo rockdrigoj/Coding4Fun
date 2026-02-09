@@ -4,7 +4,8 @@
 var items = new List<(string Name, int Quantity, decimal Price)>();
 
 Console.Write("Customer type (regular/premium/vip): ");
-var customerType = Console.ReadLine()?.ToLower() ?? "regular";
+var customerType = Console.ReadLine()?.ToLower();
+if (string.IsNullOrEmpty(customerType)) customerType = "regular";
 
 while (true)
 {
